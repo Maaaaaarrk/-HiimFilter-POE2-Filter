@@ -1,0 +1,539 @@
+#===============================================================================================================
+# HiimFitler
+#===============================================================================================================
+# VERSION:  0.1
+# AUTHOR:   Mark
+#
+
+#--------------------------
+# Overrides - Uniques, Valuables
+#--------------------------
+
+Show
+Rarity Unique
+SetTextColor 175 96 37 255
+SetBorderColor 175 96 37 255
+SetBackgroundColor 53 13 13 255
+PlayAlertSound 3 300
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+SetFontSize 45
+
+## Divine Orb Style
+Show
+Class "Currency"
+BaseType "Mirror" "Divine" "Perfect Jeweller's Orb"
+SetFontSize 45
+SetTextColor 255 0 0 255
+SetBorderColor 255 0 0 255
+SetBackgroundColor 255 255 255 255
+PlayAlertSound 6 300
+PlayEffect Red
+MinimapIcon 0 Red Star
+
+#--------------------------
+# Gold
+#--------------------------
+
+Show
+StackSize >= 500
+BaseType == "Gold"
+SetTextColor 252 186 3
+SetBorderColor 252 186 3
+PlayEffect Orange Temp
+SetFontSize 25
+
+Show
+BaseType == "Gold"
+SetTextColor 252 186 3
+SetBorderColor 0 0 0 255
+SetBackgroundColor 0 0 0 180
+SetFontSize 20
+
+#--------------------------
+# Uncut Gems
+#--------------------------
+
+Show
+BaseType "Uncut "
+SetTextColor 20 240 240
+SetBorderColor 20 240 240
+PlayAlertSound 2 300
+PlayEffect Cyan
+MinimapIcon 1 Cyan Triangle
+
+#--------------------------
+# Socketables and Special Character Equipment
+#--------------------------
+
+# Special A Tier - League specific socketables and jewels
+Show 
+BaseType "Soul Core" "Timeless"
+SetTextColor 0 240 190
+SetBorderColor 0 240 190
+SetFontSize 45
+MinimapIcon 2 Cyan Triangle
+PlayEffect Cyan
+
+# Special A Tier - Sanctum Relics
+Show 
+Class "Relic"
+SetTextColor 0 240 190
+SetBorderColor 0 240 190
+SetFontSize 45
+MinimapIcon 2 Cyan Triangle
+PlayEffect Cyan
+
+# Special A Tier - Rare Jewels
+Show
+Class "Jewel"
+Rarity Rare
+SetTextColor 124 0 240
+SetBorderColor 124 0 240
+SetFontSize 45
+MinimapIcon 2 Cyan Triangle
+PlayEffect Cyan
+
+# Special B Tier - Any Jewels
+Show
+Class "Jewel"
+Rarity Magic
+SetTextColor 60 0 240
+SetBorderColor 60 0 240
+SetFontSize 45
+PlayEffect Cyan Temp
+
+# Special B Tier - rune
+Show 
+BaseType " Rune"
+SetTextColor 0 240 190
+PlayEffect Cyan Temp
+
+#--------------------------
+# Socketables and Special Character Equipment
+#--------------------------
+
+# Currency Tier A: Gemcutter, Annullment
+Show
+Class "Currency"
+BaseType "Gemcutter's Prism" "Orb of Annulment" "Orb of Chance"
+SetTextColor 255 255 255 255
+SetBorderColor 255 255 255 255
+SetBackgroundColor 240 90 35
+PlayAlertSound 1 300
+PlayEffect White
+MinimapIcon 1 White Circle
+SetFontSize 45
+
+Show # Highest Value
+  Class == "Stackable Currency"
+  BaseType == "Mirror Shard" "Fracturing Orb" "Fracturing Shard" "Veiled Chaos Orb"
+	SetFontSize 45
+  SetTextColor 255 0 0 255
+  SetBackgroundColor 255 255 255 255
+  SetBorderColor 255 0 0 255
+  PlayAlertSound 6 300
+	MinimapIcon 0 Red Square
+	PlayEffect Red
+
+# Currency Tier B: Vaal, Chaos, Exalt, Exotic
+Show
+Class "Currency"
+BaseType "Vaal Orb" "Greater Jeweller's Orb" "Chaos Orb" "Lesser Jeweller's Orb" "Exotic" "Exalted Orb" "Regal Orb" "Artificer's Orb" "Glassblower's Bauble" "Orb of Alchemy" "Orb of Chance"
+SetTextColor 255 207 132
+SetBorderColor 255 207 132
+SetBackgroundColor 76 51 12
+PlayAlertSound 2 300
+PlayEffect White
+MinimapIcon 1 White Circle
+SetFontSize 45
+
+Show
+Class "Currency"
+BaseType "Distilled" "Catalyst" "Essence of" "Omen of"
+SetTextColor 255 207 132
+SetBorderColor 255 207 132
+SetBackgroundColor 76 51 12
+PlayAlertSound 2 300
+PlayEffect White
+MinimapIcon 1 White Circle
+
+# Currency Tier C: Vaal, Chaos, Exalt, Exotic
+Show
+Class "Currency"
+BaseType "Arcanist's Etcher" "Armourer's Scrap" "Blacksmith's Whetstone" "Orb of Augmentation" "Orb of Transmutation" "Regal Shard" "Chance Shard"
+SetTextColor 255 207 132
+SetBorderColor 255 207 132
+MinimapIcon 2 Grey Circle
+SetFontSize 45
+
+Show
+Class "Currency"
+BaseType "Simulacrum Splinter" "Breach Splinter" " Artifact" 
+SetTextColor 255 207 132
+SetBorderColor 255 207 132
+MinimapIcon 2 Grey Circle
+SetFontSize 40
+
+Hide
+BaseType "Scroll of Wisdom"
+AreaLevel >= 45
+
+Show
+Class "Currency"
+BaseType "Wisdom" "Shard"
+
+# Unknown currency
+Show
+Class "Currency"
+SetTextColor 255 207 132
+SetBorderColor 255 207 132
+SetBackgroundColor 76 51 12
+PlayAlertSound 2 300
+PlayEffect Pink
+MinimapIcon 1 White Circle
+SetFontSize 45
+
+# Fragments
+Show
+BaseType "Simulacrum" " Tablet" "Breachstone" "Barya" "Ultimatum" " Fragment" "Cowardly Fate" "Deadly Fate" "Victorious Fate" "Expedition Logbook"
+SetTextColor 255 207 255
+SetBorderColor 255 207 255
+SetBackgroundColor 65 20 80
+PlayAlertSound 2 300
+PlayEffect White
+MinimapIcon 1 White Square
+SetFontSize 40
+
+
+#--------------------------
+# Waystones
+#--------------------------
+
+Continue
+	Class == "Waystones"
+	Rarity == Rare
+	SetTextColor 255 255 0 255
+	
+Continue
+	Class == "Waystones"
+	Rarity == Magic
+	SetTextColor 0 0 255 255
+	
+Continue
+	Class == "Waystones"
+	Rarity == Normal
+	SetTextColor 175 175 175 255
+
+Show # Red Maps High
+	Class == "Waystones"
+	WaystoneTier >= 14
+	SetFontSize 45
+	SetBackgroundColor 40 0 0 255
+	SetBorderColor 255 0 0
+	PlayAlertSound 5 300
+	PlayEffect Red
+	MinimapIcon 1 Red Triangle
+
+Show # Red Maps Low
+	Class == "Waystones"
+	WaystoneTier >= 11
+	WaystoneTier <= 13
+	SetFontSize 45
+	SetBackgroundColor 20 0 0 255
+	SetBorderColor 255 0 0
+	PlayEffect Red
+	MinimapIcon 1 Red Star
+	PlayAlertSound 5 300
+	
+Show # Yellow Maps
+	Class == "Waystones"
+	WaystoneTier >= 6
+	WaystoneTier <= 10
+	SetFontSize 45
+	SetBackgroundColor 20 20 0 255
+	SetBorderColor 255 255 0
+	PlayEffect Yellow
+	MinimapIcon 1 Yellow Square
+	PlayAlertSound 4 300
+	
+Show # White Maps
+	Class == "Waystones"
+	WaystoneTier >= 1
+	WaystoneTier <= 5
+	SetFontSize 45
+	SetBackgroundColor 20 20 20 255
+	SetBorderColor 175 175 175
+	PlayEffect White
+	MinimapIcon 1 White Hexagon
+	PlayAlertSound 4 300
+
+
+Show
+BaseType "Waystone"
+Rarity <= Rare
+SetTextColor 255 255 255
+SetBorderColor 255 255 255
+PlayAlertSound 4 300
+PlayEffect White
+MinimapIcon 1 White Square
+SetFontSize 40
+
+#--------------------------
+# Value Rares
+#--------------------------
+
+Show
+Class "Rings" "Amulets" "Belts"
+Rarity Rare
+SetFontSize 42
+SetTextColor 233 206 75
+SetBorderColor 233 206 75
+PlayEffect Yellow
+MinimapIcon 1 Yellow Diamond
+
+#--------------------------
+# Rings, Amulets, Belts
+#--------------------------
+
+Show
+Rarity Normal
+Class "Rings" "Amulets" "Belts"
+SetFontSize 38
+
+Show
+Class "Rings" "Amulets" "Belts"
+Rarity Magic
+SetFontSize 38
+
+#--------------------------
+# Salvagable Items
+#--------------------------
+
+# Not working!
+#Show
+#Sockets > 0
+#Rarity Normal
+#SetBorderColor 200 200 200
+#SetFontSize 35
+
+Show # 1 Socket Workaround
+	Sockets == S
+	Rarity Normal
+	SetBorderColor 200 200 200
+	SetFontSize 35
+
+Show # 2 Socket Workaround
+	Sockets == SS
+	Rarity Normal
+	SetBorderColor 200 200 200
+	SetFontSize 35
+	
+Show
+	Quality > 10
+	Rarity Normal
+	SetBorderColor 200 200 200
+	SetFontSize 35
+
+# Not working!
+#Show
+#Sockets > 0
+#Rarity Magic
+#SetBorderColor 0 0 200
+#SetFontSize 35
+
+Show # 1 Socket Workaround
+	Sockets == S
+	Rarity Magic
+	SetBorderColor 0 0 200
+	SetFontSize 35
+
+Show # 2 Socket Workaround
+	Sockets == SS
+	Rarity Magic
+	SetBorderColor 0 0 200
+	SetFontSize 35
+
+Show
+	Quality > 10
+	Rarity Magic
+	SetBorderColor 0 0 200
+	SetFontSize 35
+
+#--------------------------
+# Charms
+#--------------------------
+
+Hide 
+Rarity Normal
+BaseType " Charm"
+AreaLevel >= 30
+
+Show
+Rarity Magic
+Rarity Normal
+BaseType " Charm"
+PlayEffect Blue Temp
+
+#--------------------------
+# Trash filter
+#--------------------------
+
+
+Hide # Low Flasks
+  BaseType == "Lesser Life Flask" "Medium Life Flask" "Greater Life Flask" "Grand Life Flask" "Giant Life Flask" "Colossal Life Flask" "Gargantuan Life Flask" "Lesser Mana Flask" "Medium Mana Flask" "Greater Mana Flask" "Grand Mana Flask" "Giant Mana Flask" "Colossal Mana Flask" "Gargantuan Mana Flask"
+	Rarity <= Rare
+	AreaLevel >= 65
+	
+Hide # Non Rare in maps
+  Class == "Gloves" "Boots" "Body Armours"  "Helmets" "Quivers" "Shields" "Foci" "Bows" "Staves" "Two Hand Swords" "Two Hand Axes" "Two Hand Maces" "Quarterstaves" "Crossbows" "Traps" "Claws" "Daggers" "Wands" "One Hand Swords" "One Hand Axes" "One Hand Maces" "Sceptres" "Spears" "Flails"
+	Rarity <= Rare
+	AreaLevel >= 65
+	
+
+Show
+BaseType == "Expert Laced Boots"
+
+	
+Show # Normal
+	Rarity Normal
+	SetFontSize 25
+	SetTextColor 255 255 255
+
+
+
+#--------------------------
+# Mechanic items
+#--------------------------
+	
+Show # Simulacrum
+	Class == "Map Fragments"
+	BaseType == "Simulacrum"
+  SetFontSize 45
+	SetTextColor 0 0 255 255
+	SetBorderColor 0 0 255 255
+	SetBackgroundColor 255 255 255 255
+  PlayAlertSound 1 300
+	MinimapIcon 0 Grey Triangle
+	PlayEffect Grey
+	
+Show # Breachstones
+  Class == "Breachstones"
+	SetFontSize 45
+  SetTextColor 184 0 255
+  SetBackgroundColor 255 255 255
+  SetBorderColor 184 0 255
+  PlayAlertSound 1 300
+	MinimapIcon 0 Purple Hexagon
+	PlayEffect Purple
+
+Show # Splinters-High
+  BaseType == "Splinter of Uul-Netol" "Splinter of Chayula" "Timeless Maraketh Splinter" "Timeless Templar Splinter" "Crescent Splinter"
+	SetFontSize 45
+	SetTextColor 255 235 235 255
+	SetBorderColor 210 20 210 255
+	SetBackgroundColor 65 20 80
+	PlayAlertSound 13 300
+	MinimapIcon 1 Purple Kite
+  PlayEffect Purple
+
+Show # Splinters-Low
+	BaseType == "Simulacrum Splinter" "Breach Splinter" "Splinter of Xoph" "Splinter of Tul" "Splinter of Esh" "Timeless Eternal Empire Splinter" "Timeless Karui Splinter" "Timeless Vaal Splinter"
+	SetFontSize 45
+  SetTextColor 255 255 255
+  SetBackgroundColor 20 18 85 240
+  SetBorderColor 68 68 255 255
+  PlayAlertSound 14 300
+	MinimapIcon 1 Blue Kite
+	
+Show # All Map Fragments
+	Class == "Map Fragments"
+	SetFontSize 45
+	SetTextColor 180 0 255 255
+	SetBorderColor 180 0 255 255
+	SetBackgroundColor 255 255 255 255
+	PlayAlertSound 6 300
+	PlayEffect Red
+	MinimapIcon 0 Red Star
+	
+	Show # Misc Map Items
+	Class == "Misc Map Items"
+	SetFontSize 45
+	SetTextColor 255 0 255 255
+	SetBorderColor 255 0 255 255
+	SetBackgroundColor 100 0 100 255
+	PlayAlertSound 3 300
+	PlayEffect Pink
+	MinimapIcon 0 Pink Circle
+	
+Show # Omens
+	Class == "Omen"
+	SetFontSize 45
+	SetTextColor 255 0 0 255
+	SetBorderColor 255 0 0 255
+	SetBackgroundColor 255 255 255 255
+	PlayAlertSound 1 300
+	PlayEffect Red
+	MinimapIcon 1 Red Star
+	
+Show # Expedition 
+	Class == "Expedition Logbooks"
+	SetFontSize 45
+	SetTextColor 255 85 85 255
+	SetBackgroundColor 61 8 8 255
+	SetBorderColor 255 85 85 255
+	MinimapIcon 1 Purple UpsideDownHouse
+	PlayAlertSound 3 300	
+	
+Show # Expedition-Artifacts
+  BaseType == "Black Scythe Artifact" "Broken Circle Artifact" "Sun Artifact" "Order Artifact"
+	SetFontSize 45
+	SetTextColor 255 85 85 255
+	SetBackgroundColor 61 8 8 255
+	SetBorderColor 255 85 85 255
+	MinimapIcon 1 Purple UpsideDownHouse
+	
+Show # Vault Keys
+	Class == "Vault Keys"
+	SetFontSize 45
+	SetTextColor 255 0 0 255
+	SetBorderColor 255 0 0 255
+	SetBackgroundColor 255 255 255 255
+	PlayAlertSound 6 300
+	PlayEffect Red
+	MinimapIcon 0 Red Star
+	
+Show # Trial Coins
+	Class == "Trial Coins"
+	SetFontSize 45
+	SetTextColor 255 255 255 255
+	SetBorderColor 255 255 255 255
+	SetBackgroundColor 180 0 255 255
+	PlayAlertSound 1 300
+	PlayEffect Red
+	
+Show # Inscribed Ultimatum
+	BaseType == "Inscribed Ultimatum" 
+	SetFontSize 45
+	SetTextColor 255 0 255 255
+	SetBorderColor 255 0 255 255
+	SetBackgroundColor 100 0 100 255
+	PlayAlertSound 3 300
+	PlayEffect Pink
+	MinimapIcon 0 Pink Circle
+
+#--------------------------
+# QUEST ITEMS
+#--------------------------
+Show
+  Class == "Quest Items"
+	SetTextColor 0 255 54 255
+	SetBorderColor 0 255 54 255
+	SetBackgroundColor 1 43 0 255
+	PlayAlertSound 7 300
+	SetFontSize 45
+	MinimapIcon 0 Green Star
+	PlayEffect Green Temp
+	
+Show # SAFETY ALL NON-FILTERED ITEMS but smaller
+	SetFontSize 30

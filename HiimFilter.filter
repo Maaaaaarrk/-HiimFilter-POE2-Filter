@@ -1,7 +1,7 @@
 #===============================================================================================================
 # HiimFitler
 #===============================================================================================================
-# VERSION:  0.1
+# VERSION:  0.2
 # AUTHOR:   Mark
 #
 
@@ -387,7 +387,8 @@ Hide # Low Flasks
 	
 Hide # Non Rare in maps
   Class == "Gloves" "Boots" "Body Armours"  "Helmets" "Quivers" "Shields" "Foci" "Bows" "Staves" "Two Hand Swords" "Two Hand Axes" "Two Hand Maces" "Quarterstaves" "Crossbows" "Traps" "Claws" "Daggers" "Wands" "One Hand Swords" "One Hand Axes" "One Hand Maces" "Sceptres" "Spears" "Flails"
-	Rarity <= Rare
+	Rarity Magic
+	Rarity Normal
 	AreaLevel >= 65
 	
 

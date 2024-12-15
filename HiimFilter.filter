@@ -1,7 +1,7 @@
 #===============================================================================================================
 # HiimFitler
 #===============================================================================================================
-# VERSION:  0.3
+# VERSION:  0.4
 # AUTHOR:   Mark
 #
 
@@ -322,9 +322,22 @@ Rarity Magic
 SetFontSize 38
 
 #--------------------------
-# Salvagable Items
+# Hide bad flask
 #--------------------------
 
+Hide
+Rarity <= Magic
+Class "Flask"
+AreaLevel >= 45
+
+Hide # Low Flasks
+  BaseType == "Lesser Life Flask" "Medium Life Flask" "Greater Life Flask" "Grand Life Flask" "Giant Life Flask" "Colossal Life Flask" "Gargantuan Life Flask" "Lesser Mana Flask" "Medium Mana Flask" "Greater Mana Flask" "Grand Mana Flask" "Giant Mana Flask" "Colossal Mana Flask" "Gargantuan Mana Flask"
+	Rarity <= Rare
+	AreaLevel >= 65
+
+#--------------------------
+# Salvagable Items
+#--------------------------
 
 Show # Superiors
 	Quality > 0
@@ -401,23 +414,23 @@ PlayEffect Blue Temp
 # Trash filter
 #--------------------------
 
-
-Hide # Low Flasks
-  BaseType == "Lesser Life Flask" "Medium Life Flask" "Greater Life Flask" "Grand Life Flask" "Giant Life Flask" "Colossal Life Flask" "Gargantuan Life Flask" "Lesser Mana Flask" "Medium Mana Flask" "Greater Mana Flask" "Grand Mana Flask" "Giant Mana Flask" "Colossal Mana Flask" "Gargantuan Mana Flask"
-	Rarity <= Rare
-	AreaLevel >= 65
-	
-Hide # Non Rare in maps
-  Class == "Gloves" "Boots" "Body Armours"  "Helmets" "Quivers" "Shields" "Foci" "Bows" "Staves" "Two Hand Swords" "Two Hand Axes" "Two Hand Maces" "Quarterstaves" "Crossbows" "Traps" "Claws" "Daggers" "Wands" "One Hand Swords" "One Hand Axes" "One Hand Maces" "Sceptres" "Spears" "Flails"
-	Rarity Magic
-	Rarity Normal
-	AreaLevel >= 65
-	
-
 Show
 BaseType == "Expert Laced Boots"
 
+
+
+Hide # Non Rare in maps
+  Class == "Gloves" "Boots" "Body Armours"  "Helmets" "Quivers" "Shields" "Foci" "Bows" "Staves" "Two Hand Swords" "Two Hand Axes" "Two Hand Maces" "Quarterstaves" "Crossbows" "Traps" "Claws" "Daggers" "Wands" "One Hand Swords" "One Hand Axes" "One Hand Maces" "Sceptres" "Spears" "Flails"
+	Rarity Normal
+	AreaLevel >= 65
+
+Hide # Non Rare in maps
+  Class == "Gloves" "Boots" "Body Armours"  "Helmets" "Quivers" "Shields" "Foci" "Bows" "Staves" "Two Hand Swords" "Two Hand Axes" "Two Hand Maces" "Quarterstaves" "Crossbows" "Traps" "Claws" "Daggers" "Wands" "One Hand Swords" "One Hand Axes" "One Hand Maces" "Sceptres" "Spears" "Flails"
+	Rarity Magic
+	AreaLevel >= 65
 	
+
+
 Show # Normal
 	Rarity Normal
 	SetFontSize 25
